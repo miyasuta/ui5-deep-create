@@ -1,0 +1,27 @@
+{
+  "name": "smart-control",
+  "version": "1.0.0",
+  "description": "A simple CAP project.",
+  "repository": "<Add your repository here>",
+  "license": "UNLICENSED",
+  "private": true,
+  "dependencies": {
+    "@sap/cds": "^7",
+    "@sap/cds-odata-v2-adapter-proxy": "^1.9.21",
+    "express": "^4",
+    "i": "^0.3.7",
+    "npm": "^9.8.1"
+  },
+  "devDependencies": {
+    "@sap/ux-specification": "^1.108.12",
+    "sqlite3": "^5"
+  },
+  "scripts": {
+    "start": "cds-serve",
+    "watch-ui": "cds watch --open ui/webapp/index.html?sap-ui-xx-viewCache=false"
+  },
+  "cds": {
+    "requires": {
+    }
+  }
+}

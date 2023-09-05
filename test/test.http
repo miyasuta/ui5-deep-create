@@ -1,0 +1,19 @@
+@server=http://localhost:4004
+
+###
+POST {{server}}/odata/v4/catalog/Order
+Authorization: Basic dummy:dummy
+Content-Type: application/json
+
+{
+    "customer": "test",
+    "items": [
+        {   
+            "itemNo": 1,
+            "product": "banana",
+            "quantity" : 1
+        }
+    ]
+}
+
+###

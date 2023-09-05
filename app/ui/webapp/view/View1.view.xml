@@ -1,0 +1,55 @@
+<mvc:View controllerName="demo.ui.controller.View1"
+    xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
+    xmlns:m="sap.m"
+    xmlns:smartForm="sap.ui.comp.smartform"
+	xmlns:smartField="sap.ui.comp.smartfield"
+    xmlns:smartTable="sap.ui.comp.smarttable"
+    xmlns:table="sap.ui.table">
+    
+    <m:Page id="page" title="{i18n>title}">
+
+        <smartForm:SmartForm id="smartForm"
+			editable="true"
+			validationMode="Async"
+			title="{Name}">
+			<smartForm:Group label="Order">
+				<smartForm:GroupElement>
+					<smartField:SmartField value="{customer}" />
+				</smartForm:GroupElement>
+			</smartForm:Group>
+		</smartForm:SmartForm>  
+
+        <table:Table
+                id="table"
+				rows="{items}">
+            <table:columns>
+                    <table:Column width="11rem">
+						<m:Label text="Item No." />
+						<table:template>
+							<m:Text text="{itemNo}" wrapping="false" />
+						</table:template>
+					</table:Column>
+					<table:Column width="11rem">
+						<m:Label text="Product" />
+						<table:template>
+							<m:Text text="{product}" wrapping="false" />
+						</table:template>
+					</table:Column>
+                    <table:Column width="11rem">
+						<m:Label text="Quantity" />
+						<table:template>
+							<m:Text text="{quantity}" wrapping="false" />
+						</table:template>
+					</table:Column>    
+            </table:columns>        
+        </table:Table>
+        
+
+        <m:footer>
+            <m:OverflowToolbar >
+                <m:ToolbarSpacer />
+                <m:Button text="Press" press="onPress" />
+            </m:OverflowToolbar>
+        </m:footer>
+    </m:Page>
+</mvc:View>
