@@ -17,3 +17,4 @@ Content-Type: application/json
 }
 
 ###
+GET {{server}}/odata/v4/catalog/Order?$expand=items&$orderby=createdAt desc

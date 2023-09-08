@@ -22,6 +22,13 @@
         <table:Table
                 id="table"
 				rows="{items}">
+			<table:extension>
+				<m:Toolbar >
+					<m:ToolbarSpacer />
+					<m:Button id="addButton" text="Add" press="onAdd" />
+					<m:Button id="deleteButton" text="Delete" press="onDelete" />
+				</m:Toolbar>
+			</table:extension>
             <table:columns>
                     <table:Column width="11rem">
 						<m:Label text="Item No." />
@@ -32,13 +39,13 @@
 					<table:Column width="11rem">
 						<m:Label text="Product" />
 						<table:template>
-							<m:Text text="{product}" wrapping="false" />
+							<m:Input value="{product}" wrapping="false" />
 						</table:template>
 					</table:Column>
                     <table:Column width="11rem">
 						<m:Label text="Quantity" />
 						<table:template>
-							<m:Text text="{quantity}" wrapping="false" />
+							<m:Input value="{quantity}" wrapping="false" />
 						</table:template>
 					</table:Column>    
             </table:columns>        
@@ -48,7 +55,7 @@
         <m:footer>
             <m:OverflowToolbar >
                 <m:ToolbarSpacer />
-                <m:Button text="Press" press="onPress" />
+                <m:Button text="Save" press="onSave" />
             </m:OverflowToolbar>
         </m:footer>
     </m:Page>
