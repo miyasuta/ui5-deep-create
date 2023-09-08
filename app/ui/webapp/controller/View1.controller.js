@@ -57,6 +57,5 @@ sap.ui.define([
                                         } })                    
                 this.getView().setBindingContext(context);
             }
-        
         });
     });
